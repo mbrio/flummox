@@ -8,7 +8,7 @@ SRC_JS = $(shell find src -name "*.js")
 LIB_JS = $(patsubst src/%.js,lib/%.js,$(SRC_JS))
 TEST_JS = $(shell find lib -name "*-test.js")
 
-BABEL_ARGS = --experimental --source-maps-inline
+BABEL_ARGS = --experimental
 MOCHA_ARGS = --harmony --require lib/test/init.js $(TEST_JS)
 
 # Build application
